@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50c6fa8a8b884daaa44db2b35a4a46e, type: 3}
+  m_Name: TestUnit
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3797499747948722078, guid: 25fb823e8374b4ea3ab65fb821005046, type: 3}
+  title: "\u6D4B\u8BD5\u5355\u4F4D"
+  maxHP: 100
+  maxSP: 20
+  atk: 21
+  def: 22
+  rewardName: normal_3
+  gold: 100
+  exp: 101
