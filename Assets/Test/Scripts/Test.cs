@@ -14,13 +14,13 @@ public class Test : MonoBehaviour
     void TestReward()
     {
         RewardRandom clothTable = new();
-        clothTable.AddItem(50, "0", 1);
-        clothTable.AddItem(10, "1", 1);
-        clothTable.AddItem(20, "2", 1);
+        clothTable.AddItem("0", 1, 50);
+        clothTable.AddItem("1", 1, 10);
+        clothTable.AddItem("2", 1, 20);
 
         RewardRandom table = new();
-        table.AddItem(20, "3", 1);
-        table.AddRandom(80, clothTable);
+        table.AddItem("3", 1, 20);
+        table.AddReward(clothTable, 80);
 
         List<int> res = new(new int[]{ 0, 0, 0, 0 });
         Debug.Log(res.Count);

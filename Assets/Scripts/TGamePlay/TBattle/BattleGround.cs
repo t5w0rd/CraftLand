@@ -4,11 +4,10 @@ namespace TGamePlay.TBattle
 {
     public class BattleGround
     {
-        private readonly List<BattleForce> forces;
+        private readonly List<BattleForce> forces = new();
 
         public BattleGround()
         {
-            forces = new List<BattleForce>();
         }
 
         public void AddForce(BattleForce force)

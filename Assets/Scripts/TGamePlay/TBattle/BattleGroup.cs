@@ -4,11 +4,10 @@ namespace TGamePlay.TBattle
 {
     public class BattleGroup
     {
-        private readonly List<Unit> units;
+        private readonly List<Unit> units = new();
 
         public BattleGroup()
         {
-            units = new List<Unit>();
         }
 
         public void AddUnit(Unit u)

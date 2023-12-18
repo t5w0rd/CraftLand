@@ -24,7 +24,7 @@ namespace TGamePlay.TBattle
 
     public class BattleStatistics
     {
-        private Dictionary<string, StatItem> items = new();
+        private readonly Dictionary<string, StatItem> items = new();
 
         public void AddStrIntPair(string path, string s, int i)
         {

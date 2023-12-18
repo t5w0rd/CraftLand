@@ -16,17 +16,17 @@ public class DefaultRewardLibary
         RewardAll all;
 
         random = new();
-        random.AddItem(50, "TestPosion", 1);
-        random.AddItem(50, "TestScroll", 1);
+        random.AddItem("TestPosion", 1, 50);
+        random.AddItem("TestScroll", 1, 50);
         rewards["normal_0"] = random;
 
         random = new();
-        random.AddItem(30, "TestPosion", 1);
+        random.AddItem("TestPosion", 1, 30);
         random.AddNone(70);
         rewards["normal_1"] = random;
 
         random = new();
-        random.AddItem(30, "TestScroll", 1);
+        random.AddItem("TestScroll", 1, 30);
         random.AddNone(70);
         rewards["normal_2"] = random;
 
