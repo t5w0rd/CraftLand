@@ -22,6 +22,6 @@ public class UnitControllerAH2D : UnitController
     void Update()
     {
         var inHor = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(inHor * speed * Time.deltaTime, 0.0f);
+        rb.linearVelocity = new Vector2(inHor * speed * Time.deltaTime, 0.0f);
     }
 }

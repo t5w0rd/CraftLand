@@ -19,7 +19,7 @@ public class PlayerControllerTV45 : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = speed * Time.deltaTime * inputMove;
+        rb.linearVelocity = speed * Time.deltaTime * inputMove;
 
         bool isMoving = inputMove != Vector2.zero;
         anim.SetBool("IsMoving", isMoving);

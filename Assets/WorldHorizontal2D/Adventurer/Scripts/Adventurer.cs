@@ -55,7 +55,7 @@ public class Adventurer : MonoBehaviour
     {
         CalcMoveVelocity();
 
-        if ((state == PlayerState.Idle || state == PlayerState.Moving || state == PlayerState.PreJump || state == PlayerState.Jumping) && !onGround && rb.velocity.y < 0f)
+        if ((state == PlayerState.Idle || state == PlayerState.Moving || state == PlayerState.PreJump || state == PlayerState.Jumping) && !onGround && rb.linearVelocity.y < 0f)
         {
             state = PlayerState.Falling;
             anim.SetTrigger("Fall");
@@ -107,11 +107,11 @@ public class Adventurer : MonoBehaviour
 
         if (state == PlayerState.Falling)
         {
-            rb.velocity = new(curVelocityX, Mathf.Clamp(rb.velocity.y, -fallMaxVelocityY, 0));
+            rb.linearVelocity = new(curVelocityX, Mathf.Clamp(rb.linearVelocity.y, -fallMaxVelocityY, 0));
         }
         else
         {
-            rb.velocity = new(curVelocityX, rb.velocity.y);
+            rb.linearVelocity = new(curVelocityX, rb.linearVelocity.y);
         }
     }
 
@@ -135,7 +135,7 @@ public class Adventurer : MonoBehaviour
         }
 
         state = PlayerState.Jumping;
-        rb.velocity = new(rb.velocity.x, jumpVelocityY);
+        rb.linearVelocity = new(rb.linearVelocity.x, jumpVelocityY);
         Debug.Log("Jump");
     }
 

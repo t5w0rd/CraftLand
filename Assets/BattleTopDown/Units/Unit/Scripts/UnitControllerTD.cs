@@ -57,11 +57,11 @@ public class UnitControllerTD : MonoBehaviour
     {
         if (inputMove == Vector2.zero || state == UnitControllerTDState.Attacking)
         {
-            rb.velocity = Vector2.MoveTowards(rb.velocity, Vector2.zero, moveDeAcceleration * Time.deltaTime);
+            rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, Vector2.zero, moveDeAcceleration * Time.deltaTime);
         }
         else
         {
-            rb.velocity = Vector2.ClampMagnitude(rb.velocity + inputMove * moveAcceleration * Time.deltaTime, moveSpeed);
+            rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity + inputMove * moveAcceleration * Time.deltaTime, moveSpeed);
         }
     }
 
