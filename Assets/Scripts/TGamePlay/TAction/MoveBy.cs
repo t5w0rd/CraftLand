@@ -7,6 +7,7 @@ namespace TGamePlay.TAction
         protected readonly Transform transform;
         protected Vector3 delta;
         protected Vector3 start;
+        protected Vector3 prevPos;
 
         public MoveBy(float duration, Transform transform, Vector3 delta) :
             base(duration)
@@ -28,12 +29,14 @@ namespace TGamePlay.TAction
         public override void Start()
         {
             base.Start();
-            start = transform.position;
+            prevPos = start = transform.position;
         }
 
         public override void Update(float time)
         {
+            start += transform.position - prevPos;
             transform.position = start + delta * time;
+            prevPos = transform.position;
         }
     }
 }
